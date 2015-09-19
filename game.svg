@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="800px" height="600px"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:a="http://www.adobe.com/svg10-extensions" a:timeline="independent"
+     onload="top.load(evt)">
+
+  <defs>
+    <clipPath id="gameareaclip">
+      <rect x="20" y="20" width="600" height="560"/>
+    </clipPath>
+    <pattern id="background_pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" style="fill:orange"/>
+      <rect width="2" height="18" style="fill:yellow"/>
+      <rect width="18" height="3" style="fill:yellow"/>
+    </pattern>
+    <radialGradient id="player_color">
+      <stop offset="0.0" style="stop-color:yellow;stop-opacity:1"/>
+      <stop offset="0.8" style="stop-color:yellow;stop-opacity:1"/>
+      <stop offset="1.0" style="stop-color:orange;stop-opacity:1"/>
+    </radialGradient>
+
+      <animateMotion
+              path="M0,0 0,3 0,0"
+              begin="0s" dur="0.3s" repeatCount="indefinite"
+              />
+
+<!-- 
+                                        dP                     
+                                        88                     
+88d8b.d8b. .d8888b. 88d888b. .d8888b. d8888P .d8888b. 88d888b. 
+88'`88'`88 88'  `88 88'  `88 Y8ooooo.   88   88ooood8 88'  `88 
+88  88  88 88.  .88 88    88       88   88   88.  ... 88       
+dP  dP  dP `88888P' dP    dP `88888P'   dP   `88888P' dP       
+ -->
+<g id="monster" transform="scale(1.75)">
+<g id="monsterLookingRight">
+
+    <g >
+      <ellipse cx="28" cy="46" rx="2" ry="8"
+        transform="matrix(0.732143 0 0 1 -17.8085 -23.4545)"
+        style="fill:rgb(255,255,192);stroke-width:1"/>
+      <path d="M28.0154 50 L30.9104 53.8143 L26.704 53.4714 z"
+        transform="matrix(1.25319 0 0 0.711611 -33.045 -8.03511) translate(0.127674 0.281052)" style="fill:rgb(0,0,0);stroke-width:1"/>
+      <animateMotion
+        id="leftMonsterLegAnimation"
+        path="M0,3 0,0 0,3"
+        begin="0s" dur="0.5s" repeatCount="indefinite"
+      />
+    </g>
+
+    <g >
+      <ellipse cx="30" cy="29" rx="2" ry="8"
+        transform="matrix(0.732143 0 0 1 -13.7013 -6.45455)"
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+      <path d="M28.0154 50 L30.9104 53.8143 L26.704 53.4714 z"
+        transform="matrix(1.06301 0 0 0.685394 -21.5092 -6.72426) translate(0.037629 0.583606)" style="fill:rgb(0,0,0);stroke-width:1"/>
+      <animateMotion
+        id="rightMonsterLegAnimation"
+        path="M0,0 0,3 0,0"
+        begin="0s" dur="0.5s" repeatCount="indefinite"
+      />
+    </g>
+    <rect x="29" y="28" width="3" height="4"
+        transform="matrix(0.974359 0 0 1.01922 -25.3094 -23.9928) translate(0.0962171 0.8585)"
+        
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+    <path d="M33.2857 31 L34.8571 43.2857 L25.8571 43.2857 L26.7143 30.8588 z"
+        transform="matrix(1 0 0 0.988636 -25.2727 -21.9627)"
+         style="fill:rgb(192,0,0);stroke-width:1"/>
+
+
+    <ellipse cx="29.5" cy="26.5" rx="2.5" ry="2.5"
+         style="fill:rgb(255,255,192);stroke-width:1"
+        transform="matrix(1 0 0 1 -25.2727 -23.4545) translate(0.09375 0.875)"/>
+    <g>
+      <path
+        transform="matrix(1.17803 0 0 1 -18.0178 -24.4803) translate(-0.0943194 -0.777778) translate(0 -0.3125) translate(-0.132637 0.21875) translate(-0.079582 -0.1875) translate(0.079582 0.875)"
+        
+        d="M20.7059 26.0588 C21.2582 26.0588 18.7647 26.9314 18.7647 28.5882 C18.7647 30.2451
+            17.1405 33.4706 16.5882 33.4706 C16.036 33.4706 16.6471 28.8921 16.6471 27.2353
+            C16.6471 25.5785 20.1536 26.0588 20.7059 26.0588 z"
+         style="fill:rgb(63,78,38);stroke-width:1"/>
+       </g>
+    <ellipse cx="31.5" cy="26.5" rx="0.5" ry="0.5"
+         style="fill:rgb(64,64,255);stroke-width:1"
+        transform="matrix(1 0 0 1 -25.2727 -23.4545) translate(0.09375 0.875) translate(-0.21875 -0.46875) translate(0.03125 0.15625)"
+        />
+    <path
+        transform="matrix(0.453518 0.0564456 -0.0833449 0.445043 -2.56338 -8.68727) translate(0.555098 1.8957) translate(-0.125859 -1.8097)"
+        
+        d="M23.5 29 C24.3284 29 24.3074 29.3117 24.3074 29.5878 C24.3074 29.864 24.3284 30 23.5
+            30 C22.6716 30 22 29.7761 22 29.5 C22 29.2239 22.6716 29 23.5 29 z"
+         style="fill:rgb(192,0,0);stroke-width:1"/>
+    <g transform="matrix(1 -2.44921e-016 2.44921e-016 1 -24.9545 -23.3493)">
+        <path transform="matrix(0.966212 0.257747 -0.257747 0.966212 9.0678 -9.45925)"
+             style="fill:none;stroke:rgb(192,192,0);stroke-width:2"
+            d="M34.2199 29.0225 L38.2183 33.5497 L38.3737 33.7256 L38.5413 33.9154"/>
+        <path d="M30.7353 35.8213 C34.5066 41.3069 34.5611 37.1136 38.6765 33.8213"
+            transform="translate(-1 -0.235294) translate(38.6765 38.286) scale(1.05185 1.2108) translate(-38.6765 -38.286) translate(30.7353 38.286) scale(1 0.836778) translate(-30.7353 -38.286) translate(-1.23032 -2.09011) translate(0.727009 0.40641) translate(30.7353 38.286) scale(1.04225 0.843952) translate(-30.7353 -38.286)"
+            
+             style="fill:none;stroke:rgb(255,255,192);stroke-width:2"/>
+        <ellipse cx="34.5" cy="27.5" rx="0.5" ry="0.5"
+            transform="translate(0.157895 -0.105263)"
+             style="fill:rgb(192,192,0);stroke-width:1"/>
+    </g>
+  </g>
+  <!-- <g id="monsterLookingLeft">
+     I tried it with transforming from within the js but it didnt work 
+    <ellipse cx="28" cy="46" rx="2" ry="8"
+        transform="matrix(-0.732143 0 0 1 31.8943 -23.4545)"
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+    <ellipse cx="30" cy="29" rx="2" ry="8"
+        transform="matrix(-0.732143 0 0 1 27.7871 -6.45455)"
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+    <rect x="29" y="28" width="3" height="4"
+        transform="matrix(-0.974359 0 0 1.01922 39.3015 -23.1178)"
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+    <path d="M33.2857 31 L34.8571 43.2857 L25.8571 43.2857 L26.7143 30.8588 z"
+        transform="matrix(-1 0 0 0.988636 39.3585 -21.9627)"
+         style="fill:rgb(192,0,0);stroke-width:1"/>
+    <path d="M28.0154 50 L30.9104 53.8143 L26.704 53.4714 z"
+        transform="matrix(-1.25319 0 0 0.711611 46.9708 -7.83511)"
+         style="fill:rgb(0,0,0);stroke-width:1"/>
+    <path d="M28.0154 50 L30.9104 53.8143 L26.704 53.4714 z"
+        transform="matrix(-1.06301 0 0 0.685394 35.555 -6.32426)"
+         style="fill:rgb(0,0,0);stroke-width:1"/>
+    <ellipse cx="29.5" cy="26.5" rx="2.5" ry="2.5"
+         style="fill:rgb(255,255,192);stroke-width:1"
+        transform="matrix(-1 0 0 1 39.2648 -22.5795)"/>
+    <path transform="matrix(-1.17803 0 0 1 32.371 -24.6643)"
+        d="M20.7059 26.0588 C21.2582 26.0588 18.7647 26.9314 18.7647 28.5882 C18.7647 30.2451
+            17.1405 33.4706 16.5882 33.4706 C16.036 33.4706 16.6471 28.8921 16.6471 27.2353
+            C16.6471 25.5785 20.1536 26.0588 20.7059 26.0588 z"
+         style="fill:rgb(63,78,38);stroke-width:1"/>
+    <ellipse cx="31.5" cy="26.5" rx="0.5" ry="0.5"
+         style="fill:rgb(64,64,255);stroke-width:1"
+        transform="matrix(-1 0 0 1 39.4523 -22.892)"/>
+    <path
+        transform="matrix(-0.453518 0.0564456 0.0833449 0.445043 16.4617 -8.62477)"
+        d="M23.5 29 C24.3284 29 24.3074 29.3117 24.3074 29.5878 C24.3074 29.864 24.3284 30 23.5
+            30 C22.6716 30 22 29.7761 22 29.5 C22 29.2239 22.6716 29 23.5 29 z"
+         style="fill:rgb(192,0,0);stroke-width:1"/>
+    <g transform="matrix(-1 -2.44921e-016 -2.44921e-016 1 39.0403 -23.3493)">
+        <path transform="matrix(0.966212 0.257747 -0.257747 0.966212 9.0678 -9.45925)"
+             style="fill:none;stroke:rgb(192,192,0);stroke-width:2"
+            d="M34.2199 29.0225 L38.2183 33.5497 L38.3737 33.7256 L38.5413 33.9154"/>
+        <path d="M30.7353 35.8213 C34.5066 41.3069 34.5611 37.1136 38.6765 33.8213"
+            transform="translate(-1 -0.235294) translate(38.6765 38.286) scale(1.05185 1.2108) translate(-38.6765 -38.286) translate(30.7353 38.286) scale(1 0.836778) translate(-30.7353 -38.286) translate(-1.23032 -2.09011) translate(0.727009 0.40641) translate(30.7353 38.286) scale(1.04225 0.843952) translate(-30.7353 -38.286)"
+           
+             style="fill:none;stroke:rgb(255,255,192);stroke-width:2"/>
+        <ellipse cx="34.5" cy="27.5" rx="0.5" ry="0.5"
+            transform="translate(0.157895 -0.105263)"
+             style="fill:rgb(192,192,0);stroke-width:1"/>
+    </g>
+
+  </g> -->
+</g>
+
+    <g id="bullet">
+      <circle cx="5" cy="5" r="5" style="fill:black"/>
+      <circle cx="6" cy="3" r=" 1" style="fill:white"/>
+    </g>
+
+
+
+    <g id="bar">
+      <rect x="0" y="0" width="40" height="15" style="fill:white;stroke:black"/>
+      <text x="20" y="13" width="40" height="15" style="text-anchor:middle;font-size:15px">Bar</text>
+      <rect x="0" y="15" width="20" height="45" style="fill:brown;stroke:black"/>
+      <rect x="20" y="15" width="20" height="45" style="fill:brown;stroke:black"/>
+      <circle cx="15" cy="30" r="3" style="fill:black"/>
+      <circle cx="25" cy="30" r="3" style="fill:black"/>
+    </g>
+
+
+<!-- 
+dP                                  
+88                                  
+88d888b. .d8888b. .d8888b. 88d888b. 
+88'  `88 88ooood8 88ooood8 88'  `88 
+88.  .88 88.  ... 88.  ... 88       
+88Y8888' `88888P' `88888P' dP       
+ -->
+<g id="beer" transform="scale(1.2)">
+    <rect x="15" y="14" width="14" height="18"
+        transform="translate(-3.25 -0.5) translate(22 32) scale(1 1.11111) translate(-22 -32) translate(-10.5 -7.20001) translate(7.6 8.10001) translate(-7.6 -7.74001)"
+        
+         style="fill:rgb(128,255,255)"/>
+    <rect x="14" y="13" width="10" height="18" rx="4.5" ry="4.5"
+        transform="translate(24 22) scale(1.13 1) translate(-24 -22) translate(0.265487 -0.1) translate(14 22) scale(1.04425 1) translate(-14 -22) translate(19 31) scale(1 1.02778) translate(-19 -31) translate(-0.338983 0.0972973) translate(14 22) scale(1.04237 1) translate(-14 -22) translate(-8.53659 -7.78377) translate(6.17887 8.75674) translate(-6.17887 -8.36755)"
+        
+         style="fill:rgb(255,255,0);stroke-width:1"/>
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="translate(-2 4) translate(3.5 -1.2) translate(-4.4 1.8) translate(0.6 0.3) translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6) translate(0 0)"
+        
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+    <ellipse cx="16.5" cy="12" rx="2.5" ry="3"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <ellipse cx="22.5" cy="13" rx="2.5" ry="3"
+         style="stroke-width:1;fill:rgb(255,255,255)"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <ellipse cx="19.5" cy="11" rx="2.5" ry="3"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <ellipse cx="24.5" cy="14" rx="1.5" ry="3"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <ellipse cx="25" cy="12" rx="2" ry="1"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <path
+        transform="translate(1.3 -0.6) translate(-0.4 0) translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"
+        
+        d="M25.7 18.2 C28.4614 18.2 30.7 20.4386 30.7 23.2 C30.7 25.9614 28.4614 28.2 25.7 28.2
+            C22.9386 28.2 24.6 28.7614 24.6 26 C24.6 23.2386 22.9386 18.2 25.7 18.2 z"
+         style="fill:rgb(128,255,255);stroke-width:1"/>
+    <path
+        d="M27 19.7 C28.1046 19.7 30 21.0432 30 22.7 C30 24.3568 28.0046 26 26.9 26 C25.7954
+            26 26 24.3568 26 22.7 C26 21.0432 25.8954 19.7 27 19.7 z"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="translate(-10.5 -8) translate(7.6 9) translate(-7.6 -8.6)"/>
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="matrix(1 0 0 1 5.2 11.3) translate(-18.2 -10.6) translate(0.3 -1.2)"
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="matrix(1 0 0 1 5.2 11.3) translate(18 5) scale(0.68 0.8) translate(-18 -5) translate(-9.70588 -13.5)"
+        
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+</g>
+
+
+
+
+    <g id="disappearingPlatform">
+      <rect x="0" y="0" width="40" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+    </g>
+
+    <g id="highScoreTable" transform="translate(0,0)" width="600" height="560">
+      <rect x="0" y="0" width="600" height="560" style="fill:gray;fill-opacity:0.5" />
+      <text x="300" y="50" style="text-anchor:middle;font-size:40px">Game Over:</text>
+      <rect x="100" y="75" width="400" height="470" style="fill:white;fill-opacity:0.85" />
+      <text x="300" y="100" style="text-anchor:middle;font-size:30px">High Score:</text>
+      <text id="highScoreEntrys" x="0" y="120" style="text-anchor:left;font-size:30px"></text>
+      <text x="300" y="470"
+          style="font-weight:bold;fill:red;font-size:25px;text-anchor:middle">Do you want more Beer?</text>
+      <g onclick="top.restartGame(false)" transform="translate(120,490)">
+        <rect x="0" y="0" width="160" height="40"
+          style="fill:gray;stroke:red;stroke-width:2" />
+        <text x="80" y="28"
+          style="fill:black;font-size:20px;text-anchor:middle">Normal Mode</text>
+      </g>
+      <g onclick="top.restartGame(true)" transform="translate(320,490)">
+        <rect x="0" y="0" width="160" height="40"
+          style="fill:gray;stroke:red;stroke-width:2" />
+        <text x="80" y="28"
+          style="fill:black;font-size:20px;text-anchor:middle">Drunk Mode</text>
+      </g>
+    </g>
+
+
+  </defs> 
+
+  <rect width="100%" height="100%" style="fill:url(#background_pattern);stroke:orange;stroke-width:4" />
+
+  <rect x="20" y="20" width="600" height="560" style="fill:black;stroke:black;stroke-width:5" />
+
+  <g style="clip-path:url(#gameareaclip)">
+    <g transform="translate(20,20)">
+      <g id="gamearea" transform="translate(0,0)" width="600" height="560">
+        <rect x="0" y="0" width="600" height="560" style="fill:gray" />
+
+        <!-- I know I could use defs for this..--> 
+        <g id="portals">
+          <g>
+            <ellipse cx="380" cy="20" rx="20" ry="4" style="fill:blue" />
+            <ellipse cx="377" cy="20" rx="12" ry="3" style="fill:white" />
+            <ellipse cx="375" cy="20" rx="10" ry="3" style="fill:black" />
+          </g>
+          <g>
+            <ellipse cx="500" cy="400" rx="20" ry="4" style="fill:blue" />
+            <ellipse cx="497" cy="400" rx="12" ry="3" style="fill:white" />
+            <ellipse cx="495" cy="400" rx="10" ry="3" style="fill:black" />
+          </g>
+        </g>
+
+
+<!-- 
+         dP            dP   .8888b                                       
+         88            88   88   "                                       
+88d888b. 88 .d8888b. d8888P 88aaa  .d8888b. 88d888b. 88d8b.d8b. .d8888b. 
+88'  `88 88 88'  `88   88   88     88'  `88 88'  `88 88'`88'`88 Y8ooooo. 
+88.  .88 88 88.  .88   88   88     88.  .88 88       88  88  88       88 
+88Y888P' dP `88888P8   dP   dP     `88888P' dP       dP  dP  dP `88888P' 
+88                                                                       
+dP                     
+ -->
+        <g id="platforms">
+          <!-- 1 --> 
+          <rect x="0" y="80" width="80" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 2 -->
+          <rect x="160" y="120" width="280" height="40" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 3 -->
+          <rect x="500" y="80" width="100" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 4 -->
+          <rect x="480" y="200" width="120" height="40" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 5 -->
+          <rect x="140" y="360" width="200" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 5.1 -->
+          <rect x="380" y="360" width="140" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 6 -->
+          <rect x="160" y="240" width="120" height="20" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 7 -->
+          <rect x="340" y="280" width="40" height="100" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 8 -->
+          <rect x="420" y="480" width="40" height="80" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 9 -->
+          <rect x="260" y="520" width="80" height="40" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 10 moving -->
+          <rect id="movingPlatform" x="60" y="460" width="160" height="20" style="fill:red;stroke:black;stroke-width:2"/>
+          <!-- 11 -->
+          <rect x="0" y="380" width="40" height="60" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          <!-- 12 --> 
+          <rect x="0" y="180" width="100" height="40" style="fill:url(#background_pattern);stroke:black;stroke-width:2"/>
+          
+          <g id="disappearingPlatforms" />
+
+        </g>
+
+
+<!-- 
+         dP                                     
+         88                                     
+88d888b. 88 .d8888b. dP    dP .d8888b. 88d888b. 
+88'  `88 88 88'  `88 88    88 88ooood8 88'  `88 
+88.  .88 88 88.  .88 88.  .88 88.  ... 88       
+88Y888P' dP `88888P8 `8888P88 `88888P' dP       
+88                        .88                   
+dP                    d8888P       
+ -->
+        <g id="player">
+    <ellipse cx="33" cy="20.5" rx="4" ry="6.5"
+        transform="translate(0.666667 -3.33333) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667)"
+        
+         style="fill:rgb(255,255,192);stroke-width:1"/>
+    <rect x="30" y="45" width="5" height="15"
+        transform="translate(30 52.5) scale(0.833333 1) translate(-30 -52.5) translate(-0.857143 0.285714) translate(-29.6 -7.33333) translate(-4.4 -1.66667)"
+        
+         style="fill:rgb(0,0,255);stroke-width:1"/>
+    <path d="M42 45 L42 60 L38 60 L38 45 z"
+        transform="translate(-1.83333 0) translate(0.666667 0) translate(2.42857 -0.142857) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667)"
+        
+         style="fill:rgb(0,0,255);stroke-width:1"/>
+    <path
+        d="M32 21 C38.6274 21 32.4445 25.8555 39.1112 32.1969 C45.7779 38.5383 38.6274 50 32
+            50 C25.3726 50 25.8333 43.8414 25.8333 35.8333 C25.8333 27.8253 25.3726 21 32
+            21 z"
+         style="fill:rgb(110,111,43);stroke-width:1"
+        transform="matrix(1 0 0 1 3 -0.833333) translate(0 -0.285714) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667) translate(25.8333 35.5) scale(1.14005 1) translate(-25.8333 -35.5) translate(25.8333 35.5) scale(1.07658 1) translate(-25.8333 -35.5)"
+        />
+    <rect x="47" y="56" width="8" height="3"
+        transform="translate(-10.1429 0.857143) translate(-0.428571 0.285714) translate(2.57143 -0.142857) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667)"
+        
+         style="fill:rgb(0,0,0);stroke-width:1"/>
+    <rect x="47" y="56" width="8" height="3"
+        transform="matrix(1 0 0 1 -20.5715 -27.8571) translate(3.71429 28.7143) translate(-0.571429 0) translate(-0.857143 0.428571) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667)"
+        
+         style="fill:rgb(0,0,0);stroke-width:1"/>
+    <path
+        transform="translate(23 2.57143) translate(-24.6667 -7.33333) translate(-3.66667 -1.66667)"
+        
+        d="M8.14286 7.28571 C9.24742 7.28571 12.8571 7.26216 12.8571 8.64286 C12.8571 10.0236
+            10.676 9.71429 9.57143 9.71429 C8.46687 9.71429 6.28571 13.7378 6.28571 12.3571
+            C6.28571 10.9764 7.0383 7.28571 8.14286 7.28571 z"
+         style="fill:rgb(64,64,0);stroke-width:1"/>
+    <path
+        d="M32.9091 17.0909 C32.8589 17.0909 32.8182 17.0909 32.8182 17.0909 C32.8182 17.1913
+            32.8589 17.2727 32.9091 17.2727 C33.0597 17.2727 33.1818 17.1913 33.1818 17.0909
+            C33.1818 16.8901 33.0597 16.7273 32.9091 16.7273 C32.6581 16.7273 32.4545
+            16.8901 32.4545 17.0909 C32.4545 17.3922 32.6581 17.6364 32.9091 17.6364 C33.2605
+            17.6364 33.5455 17.3922 33.5455 17.0909 C33.5455 16.6893 33.2605 16.3636
+            32.9091 16.3636 C32.4572 16.3636 32.0909 16.6893 32.0909 17.0909 C32.0909
+            17.593 32.4572 18 32.9091 18 C33.4614 18 33.9091 17.593 33.9091 17.0909 C33.9091
+            16.4884 33.4614 16 32.9091 16"
+        transform="matrix(1.1 0 0 1 -3.3 0) translate(-3.33333 -1.66667)"
+         style="fill:none;stroke-width:2"/>
+    <path
+        d="M37.15 22.35 C36.9567 22.35 36.8 22.35 36.8 22.35 C36.8 22.7366 36.9567 23.05 37.15
+            23.05 C37.7299 23.05 38.2 22.7366 38.2 22.35 C38.2 21.5768 37.7299 20.95 37.15
+            20.95 C36.1835 20.95 35.4 21.5768 35.4 22.35 C35.4 23.5098 36.1835 24.45
+            37.15 24.45 C38.5031 24.45 39.6 23.5098 39.6 22.35 C39.6 20.8036 38.5031 19.55
+            37.15 19.55 C35.4103 19.55 34 20.8036 34 22.35 C34 24.283 35.4103 25.85 37.15
+            25.85 C39.2763 25.85 41 24.283 41 22.35 C41 20.0304 39.2763 18.15 37.15 18.15"
+        
+        transform="matrix(1 0 0 1.03896 3.39728e-014 -0.857143) translate(37.5 25.85) scale(1 1.16071) translate(-37.5 -25.85) translate(34 22) scale(-0.693878 1) translate(-34 -22) translate(37.5 18.15) scale(1 -0.784615) translate(-37.5 -18.15) translate(20.1765 -11.4745) translate(5.28431 1.76145)"
+        
+         style="fill:none;stroke-width:2"/>
+    <path
+        transform="translate(34.5 48) scale(1 1.57143) translate(-34.5 -48) translate(28 45) scale(1.02198 1.21212) translate(-28 -45) translate(1.67742 -0.075) translate(-0.978495 -0.15) translate(34.5 45) scale(1 1.075) translate(-34.5 -45) translate(1.11828 0) translate(-0.55914 0) translate(34.5 48) scale(1 1.44186) translate(-34.5 -48) translate(-0.139785 -0.580645) translate(35.0591 45.0968) scale(1 1.16129) translate(-35.0591 -45.0968) translate(27.5806 45.0968) scale(0.962617 1.01389) translate(-27.5806 -45.0968) translate(27.5806 48.0968) scale(1.1068 0.958904) translate(-27.5806 -48.0968) translate(-22.654 -2.2) translate(-3.36749 -0.5) translate(27.5806 46.5968) scale(1.0614 1) translate(-27.5806 -46.5968) translate(27.5806 48.0968) scale(1.06749 0.95) translate(-27.5806 -48.0968) translate(27.5806 45.0968) scale(1 0.964912) translate(-27.5806 -45.0968)"
+         d="M42.5376 45.1935 L39.9145 48.0607 L28 48.0968 L27.5806 45.0968 z"
+         style="fill:rgb(0,0,255);stroke-width:1"/>
+    <rect x="28" y="40" width="17" height="2"
+        transform="translate(0.428571 -1.14286) translate(-0.142857 1) translate(0 -0.428571) translate(36.5 42) scale(1 1.21429) translate(-36.5 -42) translate(0.571429 -0.117647) translate(-24.6667 -6.03919) translate(-3.66667 -1.37254) translate(28 41) scale(1.04902 1) translate(-28 -41) translate(28 41) scale(1.05607 1) translate(-28 -41) translate(28 41) scale(0.99115 1) translate(-28 -41)"
+        
+         style="fill:rgb(0,0,0);stroke-width:1"/>
+    <path d="M31.8604 16.6727 C30.8894 21.5278 28.023 14.6773 31.7825 15.5753"
+        transform="translate(31.8604 16.9992) scale(0.743898 1) translate(-31.8604 -16.9992) translate(0.336068 -0.178571) translate(-33.1587 -7.33333) translate(-4.92899 -1.66667)"
+        
+         style="fill:none;stroke:rgb(0,0,0);stroke-width:1"/>
+    <path d="" style="fill:none;stroke:rgb(0,0,0);stroke-width:1"
+        transform="translate(-3.66667 -1.66667)"/>
+    <ellipse cx="8" cy="6" rx="0" ry="1"
+         style="fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1"/>
+    <ellipse cx="8.5" cy="6" rx="1.5" ry="1"
+        transform="translate(7 6) scale(0.488889 1) translate(-7 -6) translate(0 -0.8) translate(8.5 5) scale(1 0.866667) translate(-8.5 -5) translate(-0.136364 -0.307692)"
+        
+         style="fill:rgb(0,0,255);stroke-width:1"/>
+    <path
+        d="M8.96667 6.6 C9.79509 6.6 9.66667 7.44772 9.66667 8 C9.66667 8.55228 9.52842 8.6
+            8.7 8.6 C7.87158 8.6 7.86667 8.68561 7.86667 8.13333 C7.86667 7.58105 8.13825
+            6.6 8.96667 6.6 z" transform="translate(-0.0666667 0.466667)"
+         style="stroke-width:1;stroke:rgb(255,64,64);fill-opacity:0.05"/>
+    <path d="M9.2 6.004" style="fill:none;stroke:rgb(0,0,0);stroke-width:1"/>
+    <path d="M6.04545 16.5909 C9.12662 21.7262 16.5957 27.1244 19.8636 18.9545"
+         style="fill:none;stroke-width:3;stroke:rgb(255,255,192)"/>
+    <rect x="15" y="14" width="14" height="18"
+        transform="matrix(-0.341087 0 0 0.459185 27.2869 -4.58214) translate(-8.79542 25.2622) translate(2.05226 0)"
+        
+         style="fill:rgb(128,255,255)"/>
+    <rect x="14" y="13" width="10" height="18" rx="4.5" ry="4.5"
+        transform="matrix(-0.419536 0 0 0.424747 27.7542 -3.26203) translate(-7.15075 27.3104) translate(1.66851 0)"
+        
+         style="fill:rgb(255,255,0);stroke-width:1"/>
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="matrix(-0.341087 0 0 0.413267 26.9628 -0.881126) translate(-8.79542 28.0691) translate(2.05226 0)"
+        
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+    <ellipse cx="16.5" cy="12" rx="2.5" ry="3"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="matrix(-0.341087 0 0 0.413267 26.1783 -2.90613) translate(-8.79542 28.0691) translate(2.05226 0)"
+        />
+    <ellipse cx="22.5" cy="13" rx="2.5" ry="3"
+         style="stroke-width:1;fill:rgb(255,255,255)"
+        transform="matrix(-0.341087 0 0 0.413267 26.1783 -2.90613) translate(-8.79542 28.0691) translate(2.05226 0)"
+        />
+    <ellipse cx="19.5" cy="11" rx="2.5" ry="3"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="matrix(-0.341087 0 0 0.413267 26.1783 -2.90613) translate(-8.79542 28.0691) translate(2.05226 0)"
+        />
+    <ellipse cx="25" cy="12" rx="2" ry="1"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="matrix(-0.341087 0 0 0.413267 26.1783 -2.90613) translate(-8.79542 28.0691) translate(2.05226 0)"
+        />
+    <path
+        transform="matrix(-0.341087 0 0 0.413267 25.8714 -3.15409) translate(-8.79542 28.0691) translate(2.05226 0)"
+        
+        d="M25.7 18.2 C28.4614 18.2 30.7 20.4386 30.7 23.2 C30.7 25.9614 28.4614 28.2 25.7 28.2
+            C22.9386 28.2 24.6 28.7614 24.6 26 C24.6 23.2386 22.9386 18.2 25.7 18.2 z"
+         style="fill:rgb(128,255,255);stroke-width:1"/>
+    <path
+        d="M27 19.7 C28.1046 19.7 30 21.0432 30 22.7 C30 24.3568 28.0046 26 26.9 26 C25.7954
+            26 26 24.3568 26 22.7 C26 21.0432 25.8954 19.7 27 19.7 z"
+         style="fill:rgb(255,255,255);stroke-width:1"
+        transform="matrix(-0.341087 0 0 0.413267 26.1783 -2.90613) translate(-8.79542 28.0691) translate(2.05226 0)"
+        />
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="matrix(-0.341087 0 0 0.413267 26.9287 0.0280601) translate(-8.79542 28.0691) translate(2.05226 0)"
+        
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+    <ellipse cx="15.5" cy="8" rx="2.5" ry="3"
+        transform="matrix(-0.231939 0 0 0.330613 21.1098 0.854593) translate(-12.9344 35.0863) translate(3.01804 0)"
+        
+         style="fill:rgb(255,255,255);stroke-width:1"/>
+
+          <text id="playerName" x="10" y="-5" style="text-anchor:middle">This sould not be visible!</text> 
+        </g>
+
+        <g id="monsters"/>
+
+        <g id="bullets"/>
+
+        <g id="beers"/>
+
+      </g>
+    </g>
+  </g>
+
+  <text x="624" y="70"
+      style="fill: #999999; stroke: #000000;  font-size: 48px;">
+      The
+  </text>
+    <text x="652" y="120"
+      style="fill: #999999; stroke: #000000;  font-size: 48px;">
+      Beer
+  </text>
+  <text x="680" y="170"
+      style="fill: #999999; stroke: #000000;  font-size: 48px;">
+      Game
+  </text>
+
+  <text x="700" y="250" style="text-anchor:middle;font-size:20px">Bullets left:</text> 
+  <text id="nofBullets" x="780" y="250" style="text-anchor:middle;font-size:20px">8</text> 
+
+  <text id="score" x="700" y="300" style="text-anchor:middle;font-size:20px">Score:0</text>
+
+  <text id="level" x="700" y="400" style="text-anchor:middle;font-size:20px">Level:1</text>
+
+  <g transform="translate(650,500)">
+    <text x="60" y="-10"
+          style="fill:black;font-size:35px;text-anchor:middle">Time:</text>
+    <rect x="0" y="0" width="120" height="40"
+          style="fill:white;stroke:black;stroke-width:2" />
+    <rect id="timeRectangle" x="0" y="0" width="120" height="40"
+          style="fill:red" />
+    <text id="time" x="60" y="28"
+          style="fill:black;font-size:25px;text-anchor:middle">60s</text>
+  </g>
+
+
+
+
+  <g id="startScreen">
+    <rect id="startScreen2" width="100%" height="100%" style="fill:url(#background_pattern);stroke:orange;stroke-width:4" />
+      <text x="200" y="100" style="fill: #999999; stroke: #000000;  font-size: 60px;">The Beer Game</text>
+      <text x="100" y="200" style="fill: #000000; stroke: #000000;  font-size: 30px;">You are a beer drinker. You need to drink as much</text>
+      <text x="100" y="240" style="fill: #000000; stroke: #000000;  font-size: 30px;">beer as possible. Use W key to jump, A to move left</text>
+      <text x="100" y="280" style="fill: #000000; stroke: #000000;  font-size: 30px;">and D to move right. Your wives are going to stop</text>
+      <text x="100" y="320" style="fill: #000000; stroke: #000000;  font-size: 30px;">you on the way. Use spacebar to shoot and kill them.</text>
+      <text x="100" y="360" style="fill: #000000; stroke: #000000;  font-size: 30px;">Pick up the beers and go to the next bar quickly.</text>
+      <text x="100" y="400" style="fill: #000000; stroke: #000000;  font-size: 30px;">You can earn double points in drunk mode!</text>
+      <text x="100" y="440" style="fill: #000000; stroke: #000000;  font-size: 30px;">Press C for cheat-mode and T for a surprise.</text>
+
+      <g onclick="top.initGame(false)" transform="translate(100,470)">
+        <rect x="0" y="0" width="240" height="40"
+          style="fill:white;stroke:red;stroke-width:2" />
+        <text x="120" y="28"
+          style="fill:red;font-size:25px;text-anchor:middle">Normal Mode</text>
+      </g>
+      <g onclick="top.initGame(true)" transform="translate(500,470)">
+        <rect x="0" y="0" width="240" height="40"
+          style="fill:white;stroke:red;stroke-width:2" />
+        <text x="120" y="28"
+          style="fill:red;font-size:25px;text-anchor:middle">Drunk Mode</text>
+      </g>
+      <text x="10" y="570" style="fill:black;font-size:20px">Aiko Klostermann</text>
+      <text x="700" y="570" style="fill:black;font-size:20px">xxxx6617</text>
+  </g>
+</svg>
